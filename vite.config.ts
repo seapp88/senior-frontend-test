@@ -6,4 +6,8 @@ export default defineConfig({
     plugins: [
         tailwindcss(),
     ],
+    build: {
+        minify: false,
+        sourcemap: true,
+    }
 })
