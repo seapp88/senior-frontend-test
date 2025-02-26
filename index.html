@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Senior Frontend Test</title>
+</head>
+<body class="bg-linear-to-r from-zinc-950 via-zinc-800 to-zinc-950 p-6 min-h-screen flex flex-col items-center justify-center bg-cover
+ bg-[url(/output-onlinepngtools.png)]">
+<div class="flex flex-col max-w-[960px] mx-auto relative bg-white rounded-4xl p-10 px-12 shadow-xl">
+
+    <div class="text-3xl mb-4 leading-[44px] mb-0!">
+        Тестовое задание на позицию
+    </div>
+    <div class="text-4xl mb-4 font-bold leading-[44px] text-emerald-500 mb-0!">
+        Senior Frontend Developer
+    </div>
+
+  <div class="h-1 rounded bg-zinc-100 w-[120px] my-6"></div>
+
+    <div class="text-md">
+      <p>На данной странице реализована анимация, которая должна непрерывно и плавно двигаться.</p>
+      <p class="mb-4">Ниже расположены тесты, при воспроизведении которых, наблюдается негативный эффект на производительности страницы.</p>
+
+      <p class="font-bold">Ваша задача:</p>
+
+      <ol class="list-decimal list-inside py-1 mb-4">
+        <li>Определить, какие проблемы с производительностью вызывает каждый тест</li>
+        <li>Объяснить их причины с технической точки зрения</li>
+        <li>Предложить оптимальные решения для устранения этих проблем</li>
+      </ol>
+
+      <div class="p-3 rounded-xl bg-orange-100 border-l-4 border-orange-400 font-semibold">
+        Обратите внимание на поведение индикатора работы при запуске каждого теста — это поможет вам диагностировать проблемы.
+      </div>
+    </div>
+
+    <div class="animation-container">
+        <div class="dino dino-run-1"></div>
+        <div class="ground"></div>
+    </div>
+
+  <div class="flex flex-col gap-2">
+    <div class="p-5 rounded-2xl flex items-center gap-3 justify-between shadow-2xl shadow-zinc-300/90 border-1 border-zinc-100">
+      <div class="flex items-center justify-between gap-3">
+        <div class="text-xl font-bold">Тест 1</div>
+        <div id="test-1-indicator" class="h-4 w-4 bg-emerald-500 rounded-full shadow-md shadow-emerald-500/50 inset-shadow-emerald-100 hidden"></div>
+      </div>
+
+      <div class="flex items-center justify-between gap-2">
+        <button id="test-1-start" class="w-full justify-center py-2 px-4 rounded-xl bg-emerald-500 text-white font-medium flex items-center gap-1.5 hover:bg-emerald-400 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+          </svg>
+          Старт
+        </button>
+        <button id="test-1-stop" class="w-full justify-center py-2 px-4 rounded-xl bg-zinc-400 text-white font-medium flex items-center gap-1.5 hover:bg-zinc-500 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/>
+          </svg>
+          Стоп
+        </button>
+      </div>
+    </div>
+    <div class="p-5 rounded-2xl flex items-center gap-3 justify-between shadow-2xl shadow-zinc-300/90 border-1 border-zinc-100">
+      <div class="flex items-center justify-between gap-3">
+        <div class="text-xl font-bold">Тест 2</div>
+        <div id="test-2-indicator" class="h-4 w-4 bg-emerald-500 rounded-full shadow-md shadow-emerald-500/50 inset-shadow-emerald-100 hidden"></div>
+      </div>
+
+      <div class="flex items-center justify-between gap-2">
+        <button id="test-2-start" class="w-full justify-center py-2 px-4 rounded-xl bg-emerald-500 text-white font-medium flex items-center gap-1.5 hover:bg-emerald-400 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+          </svg>
+          Старт
+        </button>
+        <button id="test-2-stop" class="w-full justify-center py-2 px-4 rounded-xl bg-zinc-400 text-white font-medium flex items-center gap-1.5 hover:bg-zinc-500 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/>
+          </svg>
+          Стоп
+        </button>
+      </div>
+    </div>
+    <div class="p-5 rounded-2xl flex items-center gap-3 justify-between shadow-2xl shadow-zinc-300/90 border-1 border-zinc-100">
+      <div class="flex items-center justify-between gap-3">
+        <div class="text-xl font-bold">Тест 3</div>
+        <div id="test-3-indicator" class="h-4 w-4 bg-emerald-500 rounded-full shadow-md shadow-emerald-500/50 inset-shadow-emerald-100 hidden"></div>
+      </div>
+
+      <div class="flex items-center justify-between gap-2">
+        <button id="test-3-start" class="w-full justify-center py-2 px-4 rounded-xl bg-emerald-500 text-white font-medium flex items-center gap-1.5 hover:bg-emerald-400 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+          </svg>
+          Старт
+        </button>
+        <button id="test-3-stop" class="w-full justify-center py-2 px-4 rounded-xl bg-zinc-400 text-white font-medium flex items-center gap-1.5 hover:bg-zinc-500 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/>
+          </svg>
+          Стоп
+        </button>
+      </div>
+    </div>
+    <div class="p-5 rounded-2xl flex items-center gap-3 justify-between shadow-2xl shadow-zinc-300/90 border-1 border-zinc-100">
+      <div class="flex items-center justify-between gap-3">
+        <div class="text-xl font-bold">Тест 4</div>
+        <div id="test-4-indicator" class="h-4 w-4 bg-emerald-500 rounded-full shadow-md shadow-emerald-500/50 inset-shadow-emerald-100 hidden"></div>
+      </div>
+
+      <div class="flex items-center justify-between gap-2">
+        <button id="test-4-start" class="w-full justify-center py-2 px-4 rounded-xl bg-emerald-500 text-white font-medium flex items-center gap-1.5 hover:bg-emerald-400 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+          </svg>
+          Старт
+        </button>
+        <button id="test-4-stop" class="w-full justify-center py-2 px-4 rounded-xl bg-zinc-400 text-white font-medium flex items-center gap-1.5 hover:bg-zinc-500 transition cursor-pointer" >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="18" height="18">
+            <path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/>
+          </svg>
+          Стоп
+        </button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
