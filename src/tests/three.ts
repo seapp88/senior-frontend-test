@@ -39,7 +39,7 @@ export function initializeTestThree() {
                 return;
             }
             createLeak();
-        }, 300);
+        }, 10);
     }
 
     function stopMemoryLeak() {
@@ -50,7 +50,7 @@ export function initializeTestThree() {
     }
 
     function createLeak() {
-        const data = new Array(10000).fill(0).map(() => ({
+        const data = new Array(10_000).fill(0).map(() => ({
             id: Math.random(),
             value: 'x'.repeat(1000)
         }));
