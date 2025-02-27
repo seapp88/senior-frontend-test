@@ -7,7 +7,11 @@ export function initializeTestThree() {
     const stopButton = document.getElementById('test-3-stop');
     const indicator = document.getElementById('test-3-indicator');
 
-    const globalStorage: any[] = [];
+    // @ts-ignore
+    window.leakyStorage = window.leakyStorage || [];
+    // @ts-ignore
+    const leakyStorage = window.leakyStorage;
+
     let memoryInterval: number | null = null;
 
     startButton?.addEventListener('click', () => {
@@ -34,9 +38,8 @@ export function initializeTestThree() {
                 stopMemoryLeak();
                 return;
             }
-
-            allocateMemory();
-        }, 500);
+            createLeak();
+        }, 300);
     }
 
     function stopMemoryLeak() {
@@ -46,21 +49,20 @@ export function initializeTestThree() {
         }
     }
 
-    function allocateMemory() {
-        for (let i = 0; i < 300; i++) {
-            const largeObject = {
-                id: Date.now() + i,
-                data: new Array(1000).fill(0).map(() => ({
-                    value: Math.random(),
-                    text: 'x'.repeat(20 + Math.floor(Math.random() * 30))
-                })),
-                timestamp: new Date()
-            };
+    function createLeak() {
+        const data = new Array(10000).fill(0).map(() => ({
+            id: Math.random(),
+            value: 'x'.repeat(1000)
+        }));
 
-            //@ts-ignore
-            largeObject.self = largeObject;
+        leakyStorage.push(data);
 
-            globalStorage.push(largeObject);
-        }
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        document.body.appendChild(div);
+
+        div.addEventListener('click', function() {
+            console.log(data.length);
+        });
     }
 }
