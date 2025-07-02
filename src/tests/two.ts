@@ -1,6 +1,3 @@
-/**
- * Utility service for data processing
- */
 export function initializeTestTwo() {
     let isActive = false;
     let indicator: HTMLElement | null = null;

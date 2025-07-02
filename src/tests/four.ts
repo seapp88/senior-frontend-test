@@ -1,6 +1,3 @@
-/**
- * Tree structure analysis module
- */
 export function initializeTestFour() {
     let isActive = false;
     const startButton = document.getElementById('test-4-start');

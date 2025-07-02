@@ -30,7 +30,6 @@ export function initializeTestOne() {
     });
 
     function createTestElements(count: number) {
-        // Create multiple elements
         for (let i = 0; i < count; i++) {
             const element = document.createElement('div');
             element.style.position = 'absolute';
@@ -56,8 +55,7 @@ export function initializeTestOne() {
     function heavyProcess() {
         if (!isProcessing) return;
 
-        // Perform extremely heavy operations that will definitely cause reflow issues
-        for (let j = 0; j < 3; j++) { // Multiple iterations to make it worse
+        for (let j = 0; j < 3; j++) {
             for (let i = 0; i < testElements.length; i++) {
                 const element = testElements[i];
 

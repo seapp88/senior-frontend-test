@@ -1,6 +1,3 @@
-/**
- * Data management system
- */
 export function initializeTestThree() {
     let isActive = false;
     const startButton = document.getElementById('test-3-start');
